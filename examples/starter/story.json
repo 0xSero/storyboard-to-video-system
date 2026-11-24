@@ -1,0 +1,67 @@
+{
+ "name": "starter",
+ "bible": "CONTINUITY (identical in every frame): one locked camera, eye level, 16:9 wide shot of a plain workshop bench against a pale grey wall. A tall window on the left lets soft daylight fall across the bench. On the bench, left to right: a wooden stool pushed up against it, a shallow metal tray in the middle, a closed round metal tin at the right end, a small glass jar of brushes beside the tin, and a warm desk lamp at the far right. The person is a single adult in a plain navy work shirt with the sleeves rolled to the elbow, short dark hair, no jewellery, sitting on the stool facing the camera and slightly turned right. The bench top is bare between the tray and the tin. STYLE: flat editorial vector illustration with soft grain shading, muted palette, warm window light, crisp edges. No text, no captions, no logos, no extra people or characters.",
+ "master_style": "master",
+ "anchor_frame": "f1",
+ "styles": {
+  "master": {
+   "label": "master",
+   "look": "flat editorial vector illustration, soft grain shading, muted palette, warm window light, crisp edges"
+  },
+  "paper": {
+   "label": "cut paper",
+   "look": "layered cut-paper collage, visible paper fibres and soft drop shadows between layers, muted palette, warm window light"
+  }
+ },
+ "frames": {
+  "f1": {
+   "action": "The person sits on the stool at the left of the bench with both hands flat on the bench top. The tray is empty. The tin is closed, its lid fitted on. The lamp is off. Nothing else on the bench has moved."
+  },
+  "f2": {
+   "parent": "f1",
+   "action": "The person has lifted the lid off the tin and set it down flat on the bench to the right of the tin. The tin stands open in front of them and its inside is EMPTY: clean bare metal. The lamp is still off."
+  },
+  "f3": {
+   "parent": "f2",
+   "action": "The person holds one small brush up in their right hand, level with the open tin, and looks at it. The lid still lies flat on the bench to the right of the tin. The lamp is on and casts a warm pool of light across the tray and the bench."
+  }
+ },
+ "scenarios": {
+  "full": ["f1", "f2", "f3"],
+  "lid": ["f1", "f2"]
+ },
+ "key_frames": {
+  "full": "f3",
+  "lid": "f2"
+ },
+ "segments": [
+  {
+   "from": "f1",
+   "to": "f2",
+   "frames": 107,
+   "path": "The person lifts both hands off the bench, takes the lid of the tin with the right hand, raises it straight up off the tin, moves it to the right and sets it down flat on the bench beside the tin, then rests both hands back on the bench. The tin stays where it is and its inside stays empty. Nothing else on the bench moves."
+  },
+  {
+   "from": "f2",
+   "to": "f3",
+   "frames": 124,
+   "path": "The person reaches to the glass jar with the right hand, draws one small brush out of it, lifts the brush up to chest height and turns it in front of them, then holds it still. The desk lamp switches on and a warm pool of light spreads across the tray and the bench. The open tin and the lid beside it stay exactly where they are."
+  }
+ ],
+ "h3": {
+  "scene": "A plain workshop bench against a pale grey wall, one locked camera at eye level, a wooden stool at the left, a shallow metal tray in the middle, an open round metal tin with its lid beside it, a glass jar of brushes and a warm desk lamp at the right. One adult in a navy work shirt sits on the stool.",
+  "resolution": "1344x768",
+  "fps": 24,
+  "profile": 1
+ },
+ "render_order": "scenario",
+ "qa_watch": [
+  {
+   "name": "tin-lid",
+   "box": [0.66, 0.55, 0.86, 0.75],
+   "max": 25,
+   "segments": ["f2__f3"],
+   "enforce": false
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "work": "work/starter",
+ "nodes": [
+  {"name": "gpu-a", "ssh": "me@gpu-a", "root": "/home/me/sbq"},
+  {"name": "gpu-b", "ssh": "me@10.0.0.14", "jump": "me@gpu-a", "root": "/home/me/sbq"}
+ ],
+ "max_seeds": 3,
+ "publish": {"dir": "work/starter/publish", "rclone": null}
+}
